@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - curl https://packages.chef.io/files/current/latest/chef-automate-cli/chef-automate_linux_amd64.zip | gunzip - > chef-automate && chmod +x chef-automate
+  build:
+    commands:
+      - ./chef-automate airgap bundle create
+  post_build:
+    commands:
+      - <put artifact in S3 bucket>
