@@ -7,6 +7,3 @@ phases:
   build:
     commands:
       - ./chef-automate airgap bundle create
-  post_build:
-    commands:
-      - <put artifact in S3 bucket>
