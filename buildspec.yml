@@ -9,4 +9,4 @@ phases:
       - ./chef-automate airgap bundle create
   post_build:
     commands:
-      - aws s3 cp *.aib s3://sgallagher/automate-latest.aib
+      - aws s3 cp *.aib s3://sgallagher/
